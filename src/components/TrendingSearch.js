@@ -4,7 +4,7 @@ import axios from 'axios';
 function TrendingSearch(){
 
     const [trending, setTrending] = useState([])
-
+    
     const handleTrendingSearch = event => {
         event.preventDefault();
         const API_KEY = "hIyf9OFsCA8t7g4iRuepLtyvI0Kw6jLj"
@@ -19,23 +19,18 @@ function TrendingSearch(){
             });
     }
 
-
     return (
         <div className="container">
             <header>
                 <button type="submit"  onClick={handleTrendingSearch}>Trending</button>
             </header>
-            
-
             {
                 trending.map(x => {
                     return <img key={x.key} src={x.images.original.url} />
                 })
             }
-
         </div>
     )
-
 }
 
 export default TrendingSearch
