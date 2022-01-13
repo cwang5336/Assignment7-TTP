@@ -1,13 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import searchAndButton from './components/searchAndButton';
+import RegularSearch from './components/RegularSearch';
+import TrendingSearch from './components/TrendingSearch';
+import RandomSearch from './components/RandomSearch';
 
-function App() {
+export default function App() {
   return (
-    <main>
-      <searchAndButton/>
-    </main>
+    <div>
+      <RegularSearch/> 
+      <TrendingSearch/>
+      <RandomSearch/>
+    </div>
+      
   );
 }
 
-export default App;
